@@ -125,6 +125,8 @@ class Index extends Segment {
         pop();
     }
 
+    setColor() { }
+
 }
 
 class Gui {
@@ -411,9 +413,10 @@ class Gui {
                 if (s instanceof Index == false) {
 
                     let char = txt.charAt(counter);
-
-                    s.fill = Global.colors[Global.urlCodes.indexOf(char)];
-                    counter++;
+                    if (char) {
+                        s.fill = Global.colors[Global.urlCodes.indexOf(char)];
+                        counter++;
+                    }
                 }
             }
         }
@@ -429,8 +432,7 @@ const Global = {
     colors: ['green', 'deepskyblue', 'purple', 'khaki', 'red', 'greenyellow', 'black', 'white', 'saddlebrown', 'darkorange', '#C0C0C0'],
     mtmColors: ['green', 'deepskyblue', 'purple', 'khaki', 'red', 'greenyellow', 'black', 'white', 'saddlebrown', 'darkorange', '#C0C0C0'],
     crColors: ['green', 'deepskyblue', 'purple', 'yellow', 'red', 'greenyellow', 'black', 'white', 'blue', 'darkorange', '#C0C0C0'],
-    urlCodes: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K'],
-    urlSpacer: '*',
+    urlCodes: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k'],
     litery: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'],
     spacer: 7,
     picekedColor: '#C0C0C0',
