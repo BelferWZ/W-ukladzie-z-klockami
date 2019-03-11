@@ -17,7 +17,7 @@ function preload() {
 				value: str[str.indexOf(decodedNumber[i]) + decodedNumber[i].length]
 			}
 			keys.push(data)
-		}
+		} console.table(keys);
 
 		for (key of keys) {
 			let str = '';

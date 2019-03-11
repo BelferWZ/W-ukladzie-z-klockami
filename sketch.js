@@ -413,10 +413,10 @@ class Gui {
                 if (s instanceof Index == false) {
 
                     let char = txt.charAt(counter);
-                    if (char) {
-                        s.fill = Global.colors[Global.urlCodes.indexOf(char)];
-                        counter++;
-                    }
+
+                    s.fill = Global.colors[Global.urlCodes.indexOf(char)];
+                    counter++;
+
                 }
             }
         }
